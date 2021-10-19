@@ -1,0 +1,577 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Accord/3.8.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Accord.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.dll": {}
+        },
+        "build": {
+          "build/Accord.targets": {}
+        }
+      },
+      "Accord.DataSets/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0",
+          "Accord.IO": "3.8.0",
+          "Accord.Math": "3.8.0",
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.DataSets.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.DataSets.dll": {}
+        }
+      },
+      "Accord.IO/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0",
+          "SharpZipLib": "0.86.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.IO.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.IO.dll": {}
+        }
+      },
+      "Accord.MachineLearning/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0",
+          "Accord.Math": "3.8.0",
+          "Accord.Statistics": "3.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.MachineLearning.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.MachineLearning.dll": {}
+        }
+      },
+      "Accord.Math/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {},
+          "lib/netstandard2.0/Accord.Math.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Math.Core.dll": {},
+          "lib/netstandard2.0/Accord.Math.dll": {}
+        }
+      },
+      "Accord.Statistics/3.8.0": {
+        "type": "package",
+        "dependencies": {
+          "Accord": "3.8.0",
+          "Accord.Math": "3.8.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Accord.Statistics.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Accord.Statistics.dll": {}
+        }
+      },
+      "Keras.NET/3.8.5": {
+        "type": "package",
+        "dependencies": {
+          "Numpy.Bare": "3.8.1.25"
+        },
+        "compile": {
+          "lib/netstandard2.0/Keras.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Keras.dll": {}
+        }
+      },
+      "Microsoft.CSharp/4.5.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Numpy.Bare/3.8.1.25": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0",
+          "pythonnet_netstandard_py38_win": "2.5.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Numpy.Bare.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Numpy.Bare.dll": {}
+        }
+      },
+      "pythonnet_netstandard_py38_win/2.5.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Python.Runtime.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Python.Runtime.dll": {}
+        }
+      },
+      "SharpZipLib/0.86.0": {
+        "type": "package",
+        "compile": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        },
+        "runtime": {
+          "lib/20/ICSharpCode.SharpZipLib.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Accord/3.8.0": {
+      "sha512": "7kJrB570dO5ELim+2KWQNozuvWO9/BuZfZspdFy36fcWPNF2CEccblLuILeUlI8QJYd2DlBy0bfK8BlCx/uayA==",
+      "type": "package",
+      "path": "accord/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        "accord.3.8.0.nupkg.sha512",
+        "accord.nuspec",
+        "build/Accord.dll.config",
+        "build/Accord.targets",
+        "lib/net35-unity full v3.5/Accord.dll",
+        "lib/net35-unity full v3.5/Accord.xml",
+        "lib/net35-unity micro v3.5/Accord.dll",
+        "lib/net35-unity micro v3.5/Accord.xml",
+        "lib/net35-unity subset v3.5/Accord.dll",
+        "lib/net35-unity subset v3.5/Accord.xml",
+        "lib/net35-unity web v3.5/Accord.dll",
+        "lib/net35-unity web v3.5/Accord.xml",
+        "lib/net35/Accord.dll",
+        "lib/net35/Accord.xml",
+        "lib/net40/Accord.dll",
+        "lib/net40/Accord.xml",
+        "lib/net45/Accord.dll",
+        "lib/net45/Accord.xml",
+        "lib/net46/Accord.dll",
+        "lib/net46/Accord.xml",
+        "lib/net462/Accord.dll",
+        "lib/net462/Accord.xml",
+        "lib/netstandard1.4/Accord.dll",
+        "lib/netstandard1.4/Accord.xml",
+        "lib/netstandard2.0/Accord.dll",
+        "lib/netstandard2.0/Accord.xml"
+      ]
+    },
+    "Accord.DataSets/3.8.0": {
+      "sha512": "x8Ha19e4TmN+jbDkaRjnwHii2bfa41WAQbymdsh0foNh909UrU+/WZ4Bx1qUHPozNdShnDefQ8bBambULmlJDA==",
+      "type": "package",
+      "path": "accord.datasets/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "accord.datasets.3.8.0.nupkg.sha512",
+        "accord.datasets.nuspec",
+        "lib/net35-unity full v3.5/Accord.DataSets.dll",
+        "lib/net35-unity full v3.5/Accord.DataSets.xml",
+        "lib/net35-unity micro v3.5/Accord.DataSets.dll",
+        "lib/net35-unity micro v3.5/Accord.DataSets.xml",
+        "lib/net35-unity subset v3.5/Accord.DataSets.dll",
+        "lib/net35-unity subset v3.5/Accord.DataSets.xml",
+        "lib/net35-unity web v3.5/Accord.DataSets.dll",
+        "lib/net35-unity web v3.5/Accord.DataSets.xml",
+        "lib/net35/Accord.DataSets.dll",
+        "lib/net35/Accord.DataSets.xml",
+        "lib/net40/Accord.DataSets.dll",
+        "lib/net40/Accord.DataSets.xml",
+        "lib/net45/Accord.DataSets.dll",
+        "lib/net45/Accord.DataSets.xml",
+        "lib/net46/Accord.DataSets.dll",
+        "lib/net46/Accord.DataSets.xml",
+        "lib/net462/Accord.DataSets.dll",
+        "lib/net462/Accord.DataSets.xml",
+        "lib/netstandard1.4/Accord.DataSets.dll",
+        "lib/netstandard1.4/Accord.DataSets.xml",
+        "lib/netstandard2.0/Accord.DataSets.dll",
+        "lib/netstandard2.0/Accord.DataSets.xml"
+      ]
+    },
+    "Accord.IO/3.8.0": {
+      "sha512": "9t4eat0jqWFGILCzqPuFjQC+vHnDtY2O8vAFTHNIeT5jHXgXIw+dPBpjFoxKtQ1DkiRuvIH78qIx3mD5EQyvzA==",
+      "type": "package",
+      "path": "accord.io/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "accord.io.3.8.0.nupkg.sha512",
+        "accord.io.nuspec",
+        "lib/net35-unity full v3.5/Accord.IO.dll",
+        "lib/net35-unity full v3.5/Accord.IO.xml",
+        "lib/net35-unity micro v3.5/Accord.IO.dll",
+        "lib/net35-unity micro v3.5/Accord.IO.xml",
+        "lib/net35-unity subset v3.5/Accord.IO.dll",
+        "lib/net35-unity subset v3.5/Accord.IO.xml",
+        "lib/net35-unity web v3.5/Accord.IO.dll",
+        "lib/net35-unity web v3.5/Accord.IO.xml",
+        "lib/net35/Accord.IO.dll",
+        "lib/net35/Accord.IO.xml",
+        "lib/net40/Accord.IO.dll",
+        "lib/net40/Accord.IO.xml",
+        "lib/net45/Accord.IO.dll",
+        "lib/net45/Accord.IO.xml",
+        "lib/net46/Accord.IO.dll",
+        "lib/net46/Accord.IO.xml",
+        "lib/net462/Accord.IO.dll",
+        "lib/net462/Accord.IO.xml",
+        "lib/netstandard1.4/Accord.IO.dll",
+        "lib/netstandard1.4/Accord.IO.xml",
+        "lib/netstandard2.0/Accord.IO.dll",
+        "lib/netstandard2.0/Accord.IO.xml"
+      ]
+    },
+    "Accord.MachineLearning/3.8.0": {
+      "sha512": "6d8HY6/S4t5LBgD4YWrHISDX4q9s/caBu4fbHhq5RH2U4ETbtnDcvwgtsqGHKH1FyPylWFOniYjLO4B4xkEEuw==",
+      "type": "package",
+      "path": "accord.machinelearning/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        "accord.machinelearning.3.8.0.nupkg.sha512",
+        "accord.machinelearning.nuspec",
+        "lib/net35-unity full v3.5/Accord.MachineLearning.dll",
+        "lib/net35-unity full v3.5/Accord.MachineLearning.xml",
+        "lib/net35-unity micro v3.5/Accord.MachineLearning.dll",
+        "lib/net35-unity micro v3.5/Accord.MachineLearning.xml",
+        "lib/net35-unity subset v3.5/Accord.MachineLearning.dll",
+        "lib/net35-unity subset v3.5/Accord.MachineLearning.xml",
+        "lib/net35-unity web v3.5/Accord.MachineLearning.dll",
+        "lib/net35-unity web v3.5/Accord.MachineLearning.xml",
+        "lib/net35/Accord.MachineLearning.dll",
+        "lib/net35/Accord.MachineLearning.xml",
+        "lib/net40/Accord.MachineLearning.dll",
+        "lib/net40/Accord.MachineLearning.xml",
+        "lib/net45/Accord.MachineLearning.dll",
+        "lib/net45/Accord.MachineLearning.xml",
+        "lib/net46/Accord.MachineLearning.dll",
+        "lib/net46/Accord.MachineLearning.xml",
+        "lib/net462/Accord.MachineLearning.dll",
+        "lib/net462/Accord.MachineLearning.xml",
+        "lib/netstandard1.4/Accord.MachineLearning.dll",
+        "lib/netstandard1.4/Accord.MachineLearning.xml",
+        "lib/netstandard2.0/Accord.MachineLearning.dll",
+        "lib/netstandard2.0/Accord.MachineLearning.xml"
+      ]
+    },
+    "Accord.Math/3.8.0": {
+      "sha512": "K3dzeQjDIrwRnoTRoMOoIbul2Uc0B8cnEtdrSlirmIo37C+jVkmYpJzme/z4Kg99XR2Vj5W5TTNlhjn+AKR+8A==",
+      "type": "package",
+      "path": "accord.math/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        "accord.math.3.8.0.nupkg.sha512",
+        "accord.math.nuspec",
+        "lib/net35-unity full v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity full v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity full v3.5/Accord.Math.dll",
+        "lib/net35-unity full v3.5/Accord.Math.xml",
+        "lib/net35-unity micro v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity micro v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity micro v3.5/Accord.Math.dll",
+        "lib/net35-unity micro v3.5/Accord.Math.xml",
+        "lib/net35-unity subset v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity subset v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity subset v3.5/Accord.Math.dll",
+        "lib/net35-unity subset v3.5/Accord.Math.xml",
+        "lib/net35-unity web v3.5/Accord.Math.Core.dll",
+        "lib/net35-unity web v3.5/Accord.Math.Core.xml",
+        "lib/net35-unity web v3.5/Accord.Math.dll",
+        "lib/net35-unity web v3.5/Accord.Math.xml",
+        "lib/net35/Accord.Math.Core.dll",
+        "lib/net35/Accord.Math.Core.xml",
+        "lib/net35/Accord.Math.dll",
+        "lib/net35/Accord.Math.xml",
+        "lib/net40/Accord.Math.Core.dll",
+        "lib/net40/Accord.Math.Core.xml",
+        "lib/net40/Accord.Math.dll",
+        "lib/net40/Accord.Math.xml",
+        "lib/net45/Accord.Math.Core.dll",
+        "lib/net45/Accord.Math.Core.xml",
+        "lib/net45/Accord.Math.dll",
+        "lib/net45/Accord.Math.xml",
+        "lib/net46/Accord.Math.Core.dll",
+        "lib/net46/Accord.Math.Core.xml",
+        "lib/net46/Accord.Math.dll",
+        "lib/net46/Accord.Math.xml",
+        "lib/net462/Accord.Math.Core.dll",
+        "lib/net462/Accord.Math.Core.xml",
+        "lib/net462/Accord.Math.dll",
+        "lib/net462/Accord.Math.xml",
+        "lib/netstandard1.4/Accord.Math.Core.dll",
+        "lib/netstandard1.4/Accord.Math.Core.xml",
+        "lib/netstandard1.4/Accord.Math.dll",
+        "lib/netstandard1.4/Accord.Math.xml",
+        "lib/netstandard2.0/Accord.Math.Core.dll",
+        "lib/netstandard2.0/Accord.Math.Core.xml",
+        "lib/netstandard2.0/Accord.Math.dll",
+        "lib/netstandard2.0/Accord.Math.xml"
+      ]
+    },
+    "Accord.Statistics/3.8.0": {
+      "sha512": "8WsmCE31Qdy3FmRvwtAY3F9/fJEi/6uyLQrhOvSI6pP6gpoaacmCrJRIphkGf2EB8gKHRWLAc4UXr1OOPHxkmQ==",
+      "type": "package",
+      "path": "accord.statistics/3.8.0",
+      "files": [
+        ".nupkg.metadata",
+        "accord.statistics.3.8.0.nupkg.sha512",
+        "accord.statistics.nuspec",
+        "lib/net35-unity full v3.5/Accord.Statistics.dll",
+        "lib/net35-unity full v3.5/Accord.Statistics.xml",
+        "lib/net35-unity micro v3.5/Accord.Statistics.dll",
+        "lib/net35-unity micro v3.5/Accord.Statistics.xml",
+        "lib/net35-unity subset v3.5/Accord.Statistics.dll",
+        "lib/net35-unity subset v3.5/Accord.Statistics.xml",
+        "lib/net35-unity web v3.5/Accord.Statistics.dll",
+        "lib/net35-unity web v3.5/Accord.Statistics.xml",
+        "lib/net35/Accord.Statistics.dll",
+        "lib/net35/Accord.Statistics.xml",
+        "lib/net40/Accord.Statistics.dll",
+        "lib/net40/Accord.Statistics.xml",
+        "lib/net45/Accord.Statistics.dll",
+        "lib/net45/Accord.Statistics.xml",
+        "lib/net46/Accord.Statistics.dll",
+        "lib/net46/Accord.Statistics.xml",
+        "lib/net462/Accord.Statistics.dll",
+        "lib/net462/Accord.Statistics.xml",
+        "lib/netstandard1.4/Accord.Statistics.dll",
+        "lib/netstandard1.4/Accord.Statistics.xml",
+        "lib/netstandard2.0/Accord.Statistics.dll",
+        "lib/netstandard2.0/Accord.Statistics.xml"
+      ]
+    },
+    "Keras.NET/3.8.5": {
+      "sha512": "NFUV194GVq87ZBrUNMrFXy/pMPchh0clyShr4HHoKY+NYaCOIr9kvcRS1hE0rs8S9Adbvt2+gIG9HfNCWikIAg==",
+      "type": "package",
+      "path": "keras.net/3.8.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "keras.net.3.8.5.nupkg.sha512",
+        "keras.net.nuspec",
+        "lib/netstandard2.0/Keras.dll"
+      ]
+    },
+    "Microsoft.CSharp/4.5.0": {
+      "sha512": "kaj6Wb4qoMuH3HySFJhxwQfe8R/sJsNJnANrvv8WdFPMoNbKY5htfNscv+LHCu5ipz+49m2e+WQXpLXr9XYemQ==",
+      "type": "package",
+      "path": "microsoft.csharp/4.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/Microsoft.CSharp.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.3/Microsoft.CSharp.dll",
+        "lib/netstandard2.0/Microsoft.CSharp.dll",
+        "lib/portable-net45+win8+wp8+wpa81/_._",
+        "lib/uap10.0.16299/_._",
+        "lib/win8/_._",
+        "lib/wp80/_._",
+        "lib/wpa81/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "microsoft.csharp.4.5.0.nupkg.sha512",
+        "microsoft.csharp.nuspec",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcore50/Microsoft.CSharp.dll",
+        "ref/netcore50/Microsoft.CSharp.xml",
+        "ref/netcore50/de/Microsoft.CSharp.xml",
+        "ref/netcore50/es/Microsoft.CSharp.xml",
+        "ref/netcore50/fr/Microsoft.CSharp.xml",
+        "ref/netcore50/it/Microsoft.CSharp.xml",
+        "ref/netcore50/ja/Microsoft.CSharp.xml",
+        "ref/netcore50/ko/Microsoft.CSharp.xml",
+        "ref/netcore50/ru/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hans/Microsoft.CSharp.xml",
+        "ref/netcore50/zh-hant/Microsoft.CSharp.xml",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/Microsoft.CSharp.dll",
+        "ref/netstandard1.0/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/de/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/es/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/fr/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/it/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ja/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ko/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/ru/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hans/Microsoft.CSharp.xml",
+        "ref/netstandard1.0/zh-hant/Microsoft.CSharp.xml",
+        "ref/netstandard2.0/Microsoft.CSharp.dll",
+        "ref/netstandard2.0/Microsoft.CSharp.xml",
+        "ref/portable-net45+win8+wp8+wpa81/_._",
+        "ref/uap10.0.16299/_._",
+        "ref/win8/_._",
+        "ref/wp80/_._",
+        "ref/wpa81/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "Numpy.Bare/3.8.1.25": {
+      "sha512": "YqbpafFbck+JI0/guhaiJqAqTOKJXGbCfre6PZH+eeQbg27rllyTNPCdw36oLSNzagBIzJjmsGDE61lfSvairg==",
+      "type": "package",
+      "path": "numpy.bare/3.8.1.25",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Numpy.Bare.dll",
+        "numpy.bare.3.8.1.25.nupkg.sha512",
+        "numpy.bare.nuspec"
+      ]
+    },
+    "pythonnet_netstandard_py38_win/2.5.1": {
+      "sha512": "y8D5KG5Z5pFUzxBINwaN6LuM50LpkRV3TD8Lrn9jz1spbT1mBSCeYAzyA8MSo9+Jb3R/evXq0m3+d1KiDGGYUg==",
+      "type": "package",
+      "path": "pythonnet_netstandard_py38_win/2.5.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Python.Runtime.dll",
+        "lib/netstandard2.0/Python.Runtime.xml",
+        "pythonnet_netstandard_py38_win.2.5.1.nupkg.sha512",
+        "pythonnet_netstandard_py38_win.nuspec"
+      ]
+    },
+    "SharpZipLib/0.86.0": {
+      "sha512": "5DbS1SlKLMi+WG00Cm0ueYf2oyXJrowETQk8nx96rmdjTuHsA3laPykGV7Sxi0R5Xxfx0Kh/EfacAZ1f6M7y/g==",
+      "type": "package",
+      "path": "sharpziplib/0.86.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/11/ICSharpCode.SharpZipLib.dll",
+        "lib/20/ICSharpCode.SharpZipLib.dll",
+        "lib/SL3/SharpZipLib.Silverlight3.dll",
+        "lib/SL4/SharpZipLib.Silverlight4.dll",
+        "sharpziplib.0.86.0.nupkg.sha512",
+        "sharpziplib.nuspec"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Accord.DataSets >= 3.8.0",
+      "Accord.MachineLearning >= 3.8.0",
+      "Keras.NET >= 3.8.5"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Furkan Gözükara\\Desktop\\CSE419\\source code\\lecture 3 decision tree example\\lecture 3 decision tree example\\lecture 3 decision tree example.csproj",
+      "projectName": "lecture 3 decision tree example",
+      "projectPath": "C:\\Users\\Furkan Gözükara\\Desktop\\CSE419\\source code\\lecture 3 decision tree example\\lecture 3 decision tree example\\lecture 3 decision tree example.csproj",
+      "packagesPath": "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Furkan Gözükara\\Desktop\\CSE419\\source code\\lecture 3 decision tree example\\lecture 3 decision tree example\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Furkan Gözükara\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 18.1.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\DevExpress 18.1\\Components\\System\\Components\\Packages": {},
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Accord.DataSets": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "Accord.MachineLearning": {
+            "target": "Package",
+            "version": "[3.8.0, )"
+          },
+          "Keras.NET": {
+            "target": "Package",
+            "version": "[3.8.5, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpZipLib",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": 2,
+  "dgSpecHash": "sapg0IWDiFIpnk6vxOXBh7xGX8k4ui32Rn4QMap5cmwniYA/FbNWM8lSYPKbdtlTZXJ4DFU1PBh3qWPoRNgO4Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Furkan Gözükara\\Desktop\\CSE419\\source code\\lecture 3 decision tree example\\lecture 3 decision tree example\\lecture 3 decision tree example.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord\\3.8.0\\accord.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord.datasets\\3.8.0\\accord.datasets.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord.io\\3.8.0\\accord.io.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord.machinelearning\\3.8.0\\accord.machinelearning.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord.math\\3.8.0\\accord.math.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\accord.statistics\\3.8.0\\accord.statistics.3.8.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\keras.net\\3.8.5\\keras.net.3.8.5.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\numpy.bare\\3.8.1.25\\numpy.bare.3.8.1.25.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\pythonnet_netstandard_py38_win\\2.5.1\\pythonnet_netstandard_py38_win.2.5.1.nupkg.sha512",
+    "C:\\Users\\Furkan Gözükara\\.nuget\\packages\\sharpziplib\\0.86.0\\sharpziplib.0.86.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SharpZipLib 0.86.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.",
+      "libraryId": "SharpZipLib",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
