@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
+using Accord.MachineLearning.VectorMachines.Learning;
+using Accord.MachineLearning.VectorMachines;
 
 namespace lecture_6_svm_example
 {
@@ -32,14 +34,80 @@ namespace lecture_6_svm_example
         {
             initVocabulary();
             initFeatureVectors();
-            printFeatureVectors();
+            // printFeatureVectors();
+            doSVM();
+        }
+
+        private void doSVM()
+        {
+            double[][] inputs =
+{
+    new double[] { 0, 0 }, // the XOR function takes two booleans
+    new double[] { 0, 1 }, // and computes their exclusive or: the
+    new double[] { 1, 0 }, // output is true only if the two booleans
+    new double[] { 1, 1 }  // are different
+};
+            inputs = new double[1100][];
+
+            var vrNegativeTrainingSet = dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 0).Take(550);
+
+            var vrNegativeTestSet = dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 0).Skip(550);
+
+            var vrPositiveTrainingSet = dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 1).Take(550);
+
+            var vrPositiveTestSet = dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 1).Skip(550);
+
+            int irInputIndex = 0;
+
+            double[] outputClass = new double[1100];
+
+            foreach (var vrPerDocument in vrNegativeTrainingSet)
+            {
+                inputs[irInputIndex] = vrPerDocument.Value.featureWeights.ToArray();
+                outputClass[irInputIndex] = 0;
+                irInputIndex++;
+            }
+
+            foreach (var vrPerDocument in vrPositiveTrainingSet)
+            {
+                inputs[irInputIndex] = vrPerDocument.Value.featureWeights.ToArray();
+                outputClass[irInputIndex] = 1;
+                irInputIndex++;
+            }
+
+            // Now, we can create the sequential minimal optimization teacher
+            var learn = new SequentialMinimalOptimization()
+            {
+                UseComplexityHeuristic = true,
+                UseKernelEstimation = false
+              
+            };
+
+            // And then we can obtain a trained SVM by calling its Learn method
+            SupportVectorMachine svm = learn.Learn(inputs, outputClass);
+
+            // Finally, we can obtain the decisions predicted by the machine:
+            bool[] prediction = svm.Decide(inputs);
+            int irTrueCount = 0;
+            for (int i = 0; i < 1100; i++)
+            {
+                if (prediction[i] == Convert.ToBoolean(outputClass[i]))
+                {
+                    irTrueCount++;
+                }
+            }
+
+            MessageBox.Show($"the trained model can correctly predict {irTrueCount} and fails {1100 - irTrueCount} training data");
+
+
+
         }
 
         private void printFeatureVectors()
         {
-            File.WriteAllLines("positive_processed.txt", dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass==1).Select(pr => pr.Key.ToString() + " ; " + string.Join(", ", pr.Value.featureWeights)));
+            File.WriteAllLines("positive_processed.txt", dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 1).Select(pr => pr.Key.ToString() + " ; " + string.Join(", ", pr.Value.featureWeights)));
 
-            File.WriteAllLines("negative_processed.txt", dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 0).Select(pr => pr.Key.ToString() +" ; "+ string.Join(", ", pr.Value.featureWeights)));
+            File.WriteAllLines("negative_processed.txt", dicDocumentsFeatures.Where(pr => pr.Value.dblDocumentClass == 0).Select(pr => pr.Key.ToString() + " ; " + string.Join(", ", pr.Value.featureWeights)));
         }
 
         private Dictionary<double, stPerDocument> dicDocumentsFeatures = new Dictionary<double, stPerDocument>();
