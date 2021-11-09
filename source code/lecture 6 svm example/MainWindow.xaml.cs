@@ -99,7 +99,39 @@ namespace lecture_6_svm_example
 
             MessageBox.Show($"the trained model can correctly predict {irTrueCount} and fails {1100 - irTrueCount} training data");
 
+            int irCount = vrNegativeTestSet.ToList().Count + vrPositiveTestSet.ToList().Count;
+            inputs = new double[irCount][];
 
+            irInputIndex = 0;
+
+            outputClass = new double[irCount];
+
+            foreach (var vrPerDocument in vrNegativeTestSet)
+            {
+                inputs[irInputIndex] = vrPerDocument.Value.featureWeights.ToArray();
+                outputClass[irInputIndex] = 0;
+                irInputIndex++;
+            }
+
+            foreach (var vrPerDocument in vrPositiveTestSet)
+            {
+                inputs[irInputIndex] = vrPerDocument.Value.featureWeights.ToArray();
+                outputClass[irInputIndex] = 1;
+                irInputIndex++;
+            }
+
+            // Finally, we can obtain the decisions predicted by the machine:
+            prediction = svm.Decide(inputs);
+            irTrueCount = 0;
+            for (int i = 0; i < irCount; i++)
+            {
+                if (prediction[i] == Convert.ToBoolean(outputClass[i]))
+                {
+                    irTrueCount++;
+                }
+            }
+
+            MessageBox.Show($"the trained model can correctly predict {irTrueCount} and fails {irCount - irTrueCount} training data");
 
         }
 
