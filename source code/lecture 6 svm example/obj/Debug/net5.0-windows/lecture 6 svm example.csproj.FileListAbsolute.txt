@@ -1,0 +1,24 @@
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\Negative_RAW.txt
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\Positive_RAW.txt
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.exe
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.deps.json
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.runtimeconfig.json
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.runtimeconfig.dev.json
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.dll
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\ref\lecture 6 svm example.dll
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\bin\Debug\net5.0-windows\lecture 6 svm example.pdb
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.csproj.AssemblyReference.cache
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\MainWindow.g.cs
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\App.g.cs
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example_MarkupCompile.cache
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example_MarkupCompile.lref
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\MainWindow.baml
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.g.resources
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.AssemblyInfoInputs.cache
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.AssemblyInfo.cs
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.csproj.CoreCompileInputs.cache
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.dll
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\ref\lecture 6 svm example.dll
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.pdb
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 6 svm example\obj\Debug\net5.0-windows\lecture 6 svm example.genruntimeconfig.cache
