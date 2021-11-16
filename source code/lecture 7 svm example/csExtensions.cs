@@ -20,6 +20,8 @@ namespace lecture_6_svm_example
             {
                 srGG = srGG.lowerCaseText();
             }
+            if (srGG.Length < MainWindow.irMinWordLenght)
+                return null;
             return srGG;
         }
 

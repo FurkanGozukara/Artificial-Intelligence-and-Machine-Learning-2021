@@ -29,10 +29,13 @@ namespace lecture_6_svm_example
             InitializeComponent();
         }
 
-       public static bool blEnableLowerCase = true;
-    
+        public static bool blEnableLowerCase = true;
+
+        public static bool blUseTfIdf = true;
 
         public static enLowerCase caseEnum = enLowerCase.enUS;
+
+        public static int irMinWordLenght = 3;
 
         private static Dictionary<string, double> dicVocabulary = new Dictionary<string, double>();
 
@@ -86,7 +89,7 @@ namespace lecture_6_svm_example
             {
                 UseComplexityHeuristic = true,
                 UseKernelEstimation = false
-              
+
             };
 
             // And then we can obtain a trained SVM by calling its Learn method
@@ -137,7 +140,7 @@ namespace lecture_6_svm_example
                 }
             }
 
-            MessageBox.Show($"the trained model can correctly predict {irTrueCount} and fails {irCount - irTrueCount} training data - success: {(successPercent(irTrueCount,(irCount - irTrueCount)))}");
+            MessageBox.Show($"the trained model can correctly predict {irTrueCount} and fails {irCount - irTrueCount} training data - success: {(successPercent(irTrueCount, (irCount - irTrueCount)))}");
 
         }
 
@@ -162,7 +165,10 @@ namespace lecture_6_svm_example
             public string srDocumentText;
             public double[] featureWeights;
             public double dblDocumentClass;//0 = negative, 1 = positive
+            public HashSet<string> hsDocumentFinalAttributes;
         }
+
+        private static Dictionary<string, HashSet<string>> dicAttributesDocumentsList = new Dictionary<string, HashSet<string>>();
 
         private void initFeatureVectors()
         {
@@ -172,22 +178,45 @@ namespace lecture_6_svm_example
             {
                 foreach (var vrLine in File.ReadLines(vrFileName))
                 {
-                    string srLine = vrLine.normalizeText();
                     dblDocId++;
                     stPerDocument stPerDocument = new stPerDocument();
                     stPerDocument.dblDocId = dblDocId;
                     stPerDocument.dblDocumentClass = dblDocClass;
                     stPerDocument.featureWeights = new double[dicVocabulary.Count];
+                    stPerDocument.hsDocumentFinalAttributes = new HashSet<string>();
 
-                    foreach (var vrWord in srLine.Split(' '))
+                    foreach (var vrWord in vrLine.Split(' '))
                     {
-                        stPerDocument.featureWeights[(Int64)dicVocabulary[vrWord]] = 1;
+                        string srNormalizedAttribute = vrWord.normalizeText();
+                        if (string.IsNullOrEmpty(srNormalizedAttribute))
+                            continue;
+                        stPerDocument.hsDocumentFinalAttributes.Add(srNormalizedAttribute);
+                        stPerDocument.featureWeights[(Int64)dicVocabulary[srNormalizedAttribute]] = 1;
+                        if (dicAttributesDocumentsList.ContainsKey(srNormalizedAttribute) == false)
+                        {
+                            dicAttributesDocumentsList.Add(srNormalizedAttribute, new HashSet<string> { dblDocId.ToString() });
+                        }
+                        else
+                        {
+                            dicAttributesDocumentsList[srNormalizedAttribute].Add(dblDocId.ToString()) ;
+                        }
                     }
 
                     dicDocumentsFeatures.Add(dblDocId, stPerDocument);
                 }
 
                 dblDocClass++;
+            }
+
+            if (blUseTfIdf == true)
+                applyTfIdfWeight();
+        }
+
+        private void applyTfIdfWeight()
+        {
+            foreach (var vrKey in dicDocumentsFeatures.Keys.ToList())
+            {
+                
             }
         }
 
@@ -198,15 +227,17 @@ namespace lecture_6_svm_example
             {
                 foreach (var vrLine in File.ReadLines(vrFileName))
                 {
-                    string srLine = vrLine.normalizeText();
-                    foreach (var vrWord in srLine.Split(' '))
+                    foreach (var vrWord in vrLine.Split(' '))
                     {
-                        if (dicVocabulary.ContainsKey(vrWord))
+                        string srLine = vrWord.normalizeText();
+                        if (string.IsNullOrEmpty(srLine))
+                            continue;
+                        if (dicVocabulary.ContainsKey(srLine))
                         {
                             continue;
                         }
 
-                        dicVocabulary.Add(vrWord, dblWordIndex);
+                        dicVocabulary.Add(srLine, dblWordIndex);
                         dblWordIndex++;
                     }
                 }

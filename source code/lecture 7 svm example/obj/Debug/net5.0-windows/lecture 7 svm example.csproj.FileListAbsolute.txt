@@ -29,3 +29,4 @@ C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 7 svm example\obj\
 C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 7 svm example\obj\Debug\net5.0-windows\ref\lecture 7 svm example.dll
 C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 7 svm example\obj\Debug\net5.0-windows\lecture 7 svm example.pdb
 C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 7 svm example\obj\Debug\net5.0-windows\lecture 7 svm example.genruntimeconfig.cache
+C:\Users\Furkan Gözükara\Desktop\CSE419\source code\lecture 7 svm example\obj\Debug\net5.0-windows\lecture 7 svm example.csproj.AssemblyReference.cache
