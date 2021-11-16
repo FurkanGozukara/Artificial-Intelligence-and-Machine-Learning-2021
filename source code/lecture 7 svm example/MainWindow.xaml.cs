@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using System.IO;
 using Accord.MachineLearning.VectorMachines.Learning;
 using Accord.MachineLearning.VectorMachines;
+using static lecture_6_svm_example.csExtensions;
 
 namespace lecture_6_svm_example
 {
@@ -27,6 +28,11 @@ namespace lecture_6_svm_example
         {
             InitializeComponent();
         }
+
+       public static bool blEnableLowerCase = true;
+    
+
+        public static enLowerCase caseEnum = enLowerCase.enUS;
 
         private static Dictionary<string, double> dicVocabulary = new Dictionary<string, double>();
 
@@ -138,7 +144,7 @@ namespace lecture_6_svm_example
         private static string successPercent(int irTrue, int irFalse)
         {
             double dblTotal = Convert.ToDouble(irTrue) + Convert.ToDouble(irFalse);
-            return (Convert.ToDouble(irTrue) / dblTotal * 100.0).ToString("N0") + "%";
+            return (Convert.ToDouble(irTrue) / dblTotal * 100.0).ToString("N2") + "%";
         }
 
         private void printFeatureVectors()
@@ -166,13 +172,14 @@ namespace lecture_6_svm_example
             {
                 foreach (var vrLine in File.ReadLines(vrFileName))
                 {
+                    string srLine = vrLine.normalizeText();
                     dblDocId++;
                     stPerDocument stPerDocument = new stPerDocument();
                     stPerDocument.dblDocId = dblDocId;
                     stPerDocument.dblDocumentClass = dblDocClass;
                     stPerDocument.featureWeights = new double[dicVocabulary.Count];
 
-                    foreach (var vrWord in vrLine.Split(' '))
+                    foreach (var vrWord in srLine.Split(' '))
                     {
                         stPerDocument.featureWeights[(Int64)dicVocabulary[vrWord]] = 1;
                     }
@@ -191,7 +198,8 @@ namespace lecture_6_svm_example
             {
                 foreach (var vrLine in File.ReadLines(vrFileName))
                 {
-                    foreach (var vrWord in vrLine.Split(' '))
+                    string srLine = vrLine.normalizeText();
+                    foreach (var vrWord in srLine.Split(' '))
                     {
                         if (dicVocabulary.ContainsKey(vrWord))
                         {
