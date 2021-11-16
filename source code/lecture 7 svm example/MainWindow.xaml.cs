@@ -29,13 +29,15 @@ namespace lecture_6_svm_example
             InitializeComponent();
         }
 
+        public static bool blSmoothIdf = true;
+
         public static bool blEnableLowerCase = true;
 
         public static bool blUseTfIdf = true;
 
         public static enLowerCase caseEnum = enLowerCase.enUS;
 
-        public static int irMinWordLenght = 3;
+        public static int irMinWordLenght = 0;
 
         private static Dictionary<string, double> dicVocabulary = new Dictionary<string, double>();
 
@@ -216,7 +218,19 @@ namespace lecture_6_svm_example
         {
             foreach (var vrKey in dicDocumentsFeatures.Keys.ToList())
             {
-                
+                foreach (var vrProcessedKey in dicDocumentsFeatures[vrKey].hsDocumentFinalAttributes)
+                {
+                    var vrIdf = Math.Log10(Convert.ToDouble(dicAttributesDocumentsList[vrProcessedKey].Count) / (Convert.ToDouble(dicDocumentsFeatures.Count) + 1));
+
+                    if(blSmoothIdf)
+                        vrIdf = Math.Log10(Convert.ToDouble(dicAttributesDocumentsList[vrProcessedKey].Count +1 ) / (Convert.ToDouble(dicDocumentsFeatures.Count) + 1))+ 1;
+
+                    dicDocumentsFeatures[vrKey].featureWeights[(Int64)dicVocabulary[vrProcessedKey]] = dicDocumentsFeatures[vrKey].featureWeights[(Int64)dicVocabulary[vrProcessedKey]]* vrIdf
+                    ;
+
+
+                }
+        
             }
         }
 
